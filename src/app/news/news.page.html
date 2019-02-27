@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>NSBM news</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor= "let article of data?.articles" (click) = "goToSinglePage(article)">
+    <ion-img [src]="article.urlToImage"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{article.title}}</ion-card-title>
+      <p>{{article.description}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
